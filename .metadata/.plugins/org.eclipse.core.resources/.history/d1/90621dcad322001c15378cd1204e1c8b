@@ -1,0 +1,33 @@
+
+package com.scanner;
+
+import java.util.Scanner;
+
+public class Concept_Scanner {
+ public static void  Eligible(int a,int b) {
+	if (a>b) {
+		System.out.println("ELIGIBLE TO VOTE");
+	} else {
+System.out.println("NOT ELIGIBLE TO VOTE");
+	}
+	 
+}
+	
+	
+	
+	public static void main(String[] args) {
+	 Scanner vote = new Scanner(System.in);
+	  
+	 int a,b;
+	 
+	 System.out.println("Enter A:");
+	 a = vote.nextInt();
+	 System.out.println("Enter B:");
+	 b = vote.nextInt();
+	  Eligible(a,b);
+	  
+	  
+	  
+	}
+
+}

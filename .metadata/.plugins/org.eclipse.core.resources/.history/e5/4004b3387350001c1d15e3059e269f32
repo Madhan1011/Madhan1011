@@ -1,0 +1,30 @@
+package com.practice;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Mini_Project {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ELCOT\\eclipse-workspace\\Selenium1\\Driver\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+				driver.get("http://automationpractice.com/");
+			driver.manage().window().maximize();
+			Actions act=new Actions(driver);
+			driver.findElement(By.xpath("(//a[text()='Women'])")).click();
+			WebElement women = driver.findElement(By.xpath("(//img[@class='replace-2x img-responsive'])[2]"));
+			act.moveToElement(women).perform();
+			WebElement women1 = driver.findElement(By.xpath("(//img[@class='replace-2x img-responsive'])[2]"));
+			act.click(women1).perform();
+}
+
+	
+}	
+	
+

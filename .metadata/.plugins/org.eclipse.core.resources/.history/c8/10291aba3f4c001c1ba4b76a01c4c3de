@@ -1,0 +1,21 @@
+package com.hotel.Adactin_New;
+
+import com.Base_Class.Base_Class1;
+import com.Pom_Class.Login;
+import com.Pom_Class.Search;
+
+public class App_Test1 extends Base_Class1 {
+public static void main(String[] args) {
+	browserLaunch();
+	openUrl("https://adactinhotelapp.com/");
+	Login a=new Login(driver);
+	inputValues(a.getUsername(), "Madhan1020");
+	inputValues(a.getPassword(), "Madhan@1020");
+	clickOnElement(a.getLogin());
+	Search b=new Search(driver);
+	dropDown1(b.getSelect(), "London");
+	
+}
+
+
+}

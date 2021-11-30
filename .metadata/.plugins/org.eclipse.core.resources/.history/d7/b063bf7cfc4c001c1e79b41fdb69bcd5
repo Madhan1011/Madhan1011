@@ -1,0 +1,34 @@
+package com.adactin.runner;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+import com.Base_Class.Base_Class2;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="src\\test\\java\\com\\adactin\\feature\\adactin.feature",
+glue ="com.adactin.stepdefinition")
+public class Test_Runner {
+public static WebDriver driver;   //null driver
+
+@BeforeClass
+public static void Set_up() {
+  driver=Base_Class2.browserLaunch();
+  
+}
+
+@AfterClass
+public static void tear_Down() {
+driver.close();
+
+}
+	
+	
+	
+	
+}

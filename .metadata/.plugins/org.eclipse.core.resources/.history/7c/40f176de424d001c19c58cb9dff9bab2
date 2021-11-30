@@ -1,0 +1,41 @@
+package com.test_ng_practice;
+
+import org.openqa.selenium.WebDriver;
+
+public class Simple_Annotation {
+
+public WebDriver driver;
+
+public void browser_Launch() {
+	System.setProperty("webdriver.chrome.driver", "")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
